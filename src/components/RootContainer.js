@@ -7,6 +7,7 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom'
+import MapPage from './MapPage'
 import FeedPage from './FeedPage'
 import DraftsPage from './DraftsPage'
 import CreatePage from './CreatePage'
@@ -154,7 +155,7 @@ class RootContainer extends Component {
     return (
       <div className="fl w-100 pl4 pr4">
         <Switch>
-          <Route exact path="/" component={FeedPage} />
+          <Route exact path="/" component={MapPage} />
           <ProtectedRoute
             token={this.state.token}
             path="/drafts"
